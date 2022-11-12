@@ -1,4 +1,3 @@
-console.log("Hola mundo");
 const App = {
     data() {
       return {
@@ -32,8 +31,7 @@ const App = {
         if (this.cardText == true) {
           return `
       <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk of the
-        card's content.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
       `;
         } else {
@@ -50,9 +48,9 @@ const App = {
       cardImageCreate() {
         if (this.cardImage == true) {
           return `
-      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <div class="bg-image hover-overlay ripple">
         <img
-          src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+          src="https://camo.githubusercontent.com/3d8782fec25373005a29c2ed4799daa3d15f2431164cb3c189fb03ad692a1bf7/68747470733a2f2f696e6e6f76616363696f6e2e636c6f75642f77702d636f6e74656e742f75706c6f6164732f323032322f30392f4f6e426f617264696e672e706e67"
           class="img-fluid"
         />
         <a href="#!">
@@ -111,7 +109,7 @@ const App = {
       getHTMLCode() {
         return html_beautify(
           `
-        <div class="${this.customClass.join(' ').replace('  ', ' ')}" ${this.customColorCreate}>${
+          <div class="${this.customClass.join(' ').replace('  ', ' ')}" ${this.customColorCreate}>${
             this.cardImageCreate
           }${this.cardHeaderCreate}
           <div class="card-body">${this.cardTitleCreate} ${this.cardTextCreate} 
