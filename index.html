@@ -1,12 +1,524 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <script type="application/javascript" src="main.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#33b5e5">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+
+
+    <link rel="stylesheet"
+        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+
+
+    <link rel='stylesheet' id='roboto-subset.css-css'
+        href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5'
+        type='text/css' media='all' />
+
+
+    <meta charset="utf-8">
+    <title> Generador de Bootstrap card </title>
+
+
+
+    <link rel="shortcut icon" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/favicon.ico" />
+
+    <link rel="canonical" href="https://mdbootstrap.com/docs/standard/tools/builders/cards/" />
+    <link rel="stylesheet" href="style.css">
+
+    <script data-cfasync="false">
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.' + 'js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7MBMN');
+    </script>
+
+
+
 </head>
+
 <body>
 
-    <h1>Recetas</h1>
-    <p>Mis Recetas</p>
+    <main class=" pt-4  mdb-docs-layout">
+        <div class="container  px-lg-5">
+
+
+
+
+
+
+            <div class="tab-content">
+                <div class="tab-pane fade in show active" id="docsTabsOverview" role="tabpanel">
+                    <div class="row">
+
+                        <div class=" col-md-12">
+                            <style>
+                                blockquote {
+                                    margin-bottom: 0px !important;
+                                }
+                            </style>
+                            <!-- Section: Content -->
+                            <section class="">
+                                <div id="app">
+
+
+
+                                    <div class="row">
+                                        <div class="col-md-4 mb-4 mb-md-0">
+                                            <div class="card">
+                                                <div class="card-body px-4">
+                                                    <div class="text-center">
+                                                        <button type="button" class="btn btn-primary mb-4 me-2"
+                                                            v-on:click="reset">
+                                                            Reset
+                                                        </button>
+                                                    </div>
+
+                                                    <!-- formTitle -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formTitle" v-model="cardTitle" />
+                                                        <label class="form-check-label" for="formTitle"> Title </label>
+                                                    </div>
+
+                                                    <!-- formText -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formText" v-model="cardText" />
+                                                        <label class="form-check-label" for="formText"> Text </label>
+                                                    </div>
+
+                                                    <!-- formButton -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formButton" v-model="cardButton" />
+                                                        <label class="form-check-label" for="formButton"> Button
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formImage -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formImage" v-model="cardImage" />
+                                                        <label class="form-check-label" for="formImage"> Image </label>
+                                                    </div>
+
+                                                    <!-- formHeader -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formHeader" v-model="cardHeader" />
+                                                        <label class="form-check-label" for="formHeader"> Header
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formFooter -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formFooter" v-model="cardFooter" />
+                                                        <label class="form-check-label" for="formFooter"> Footer
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formCenter -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formCenter" v-model="cardCenter" />
+                                                        <label class="form-check-label" for="formCenter"> Center
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formBorder -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formBorder" v-model="cardBorder" />
+                                                        <label class="form-check-label" for="formBorder"> Border
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formTextWhite -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formTextWhite" v-model="cardTextWhite" />
+                                                        <label class="form-check-label" for="formTextWhite">
+                                                            White text
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- Custom color -->
+                                                    <p class="text-center mb-2 mt-3"><strong>Custom color</strong></p>
+
+                                                    <input type="color"
+                                                        class="form-control form-control-color w-100 mb-4"
+                                                        id="formColor" title="Choose your color" v-model="customColor"
+                                                        style="max-width: 100%; height: 40px" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 mb-4 mb-md-0">
+                                            <!-- Section: Demo -->
+                                            <section class="border p-4 d-flex justify-content-center mb-4 bg-light">
+                                                <div :class="customClass" style="width: 22rem" :style="customStyle">
+                                                    <div class="bg-image hover-overlay ripple"
+                                                        data-mdb-ripple-color="light" v-if="cardImage">
+                                                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+                                                            class="img-fluid" alt="Beach" />
+                                                        <a href="#!">
+                                                            <div class="mask"
+                                                                style="background-color: rgba(251, 251, 251, 0.15)">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-header" v-if="cardHeader">Featured</div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" v-if="cardTitle">Card title</h5>
+                                                        <p class="card-text" v-if="cardText">
+                                                            Some quick example text to build on the card title and make
+                                                            up
+                                                            the bulk of the card's content.
+                                                        </p>
+                                                        <button type="button" class="btn btn-primary" v-if="cardButton">
+                                                            Button
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-footer" v-if="cardFooter">2 days ago</div>
+                                                </div>
+                                            </section>
+                                            <!-- Section: Demo -->
+
+                                            <!-- Section:  Generated code-->
+                                            <section id="section-generated-code" ref="code" class="mb-4">
+                                                <!-- prettier-ignore -->
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <div class="docs-pills border mobile-hidden">
+                                                    <div class="d-flex justify-content-between py-2"
+                                                        style="padding-left: .6rem;">
+                                                        <ul class="nav nav-pills p-2">
+
+
+
+
+                                                            <li class="nav-item"><a class="nav-link  active show "
+                                                                    data-mdb-toggle="tab"
+                                                                    href="#mdb_6ed7c35409da2a4a4d7126a854ee842b59165125"
+                                                                    role="tab">HTML</a></li>
+
+
+
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-content">
+
+
+
+
+
+
+                                                        <div class="tab-pane fade  active show "
+                                                            id="mdb_6ed7c35409da2a4a4d7126a854ee842b59165125"
+                                                            role="tabpanel">
+                                                            <pre class="grey lighten-3 mb-0 line-numbers language-html">
+        <code class="">
+            
+              &lt;div class=&#34;card&#34;&gt;
+                  &lt;div class=&#34;card-body&#34;&gt;
+                  &lt;h5 class=&#34;card-title&#34;&gt;Card title&lt;/h5&gt;
+                  &lt;p class=&#34;card-text&#34;&gt;
+                      Some quick example text to build on the card title and make up the bulk of the
+                      card&#39;s content.
+                  &lt;/p&gt;
+                  &lt;button type=&#34;button&#34; class=&#34;btn btn-primary&#34;&gt;Button&lt;/button&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+              
+        </code>
+    </pre>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                            </section>
+                                            <!-- Section: Generated code -->
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- Section: Content -->
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (e) => {
+
+            function checkSidenavActiveLinks() {
+
+                document.querySelectorAll('.sidenav-menu li').forEach((menu) => {
+
+                    var collapse = document.querySelectorAll('ul.sidenav-collapse li').forEach((link) => {
+                        var is_active = link.querySelector('a.sidenav-link').classList.contains('active');
+                        var collapseIcon = menu.querySelector('.rotate-icon');
+
+                        if (is_active && collapseIcon) {
+                            link.classList.add('show');
+                            return false;
+                        }
+                    });
+                });
+            }
+
+
+            checkSidenavActiveLinks();
+
+            const setTransitionProperties = () => {
+                const sidenav = document.getElementById('mdb-sidenav');
+                const rotateIcons = sidenav.querySelectorAll('.rotate-icon');
+                const collapse = sidenav.querySelectorAll('.sidenav-collapse');
+
+                rotateIcons.forEach(icon => {
+                    icon.style.transitionProperty = 'transform'
+                });
+
+                collapse.forEach(collapse => {
+                    collapse.style.transitionProperty = 'height'
+                });
+            }
+
+
+            setTimeout(setTransitionProperties, 1);
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript"
+        src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/mdb5/standard/core.min.js"></script>
+
+
+
+    <script type="text/javascript"
+        src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/search/search.min.js"></script>
+    <script src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/main.min.js"></script>
+
+
+    <script>
+        let isSidenavHidden = false;
+        isSidenavHidden = false;
+        const sidenav = document.getElementById('mdb-sidenav');
+        const instance = mdb.Sidenav.getInstance(sidenav);
+
+
+        let innerWidth = null;
+
+        const setMode = () => {
+            if (window.innerWidth === innerWidth) return;
+
+            innerWidth = window.innerWidth;
+            const isFrontPage = 0;
+
+            if (innerWidth <= 1440 || isFrontPage || isSidenavHidden) {
+                instance.changeMode('over');
+                instance.hide();
+                return;
+            }
+            instance.changeMode('side');
+            instance.show();
+        };
+
+        if (sidenav) {
+            window.addEventListener('resize', setMode);
+            setMode();
+        }
+
+
+
+        function mdbScrollSpyTo(e) {
+            e.preventDefault();
+            const hash = e.target.getAttribute('href');
+            const target = document.getElementById(hash.substring(1));
+
+            window.scroll({
+                top: target.offsetTop - 100,
+                behavior: 'smooth'
+            });
+
+            if (history.pushState) {
+                history.pushState(null, null, hash);
+            } else {
+                location.hash = hash;
+            }
+        }
+
+        document.querySelectorAll('#scrollspy .menu-sidebar a').forEach((link) => {
+            link.addEventListener('click', mdbScrollSpyTo, false);
+        });
+
+
+        if (window.location.hash) {
+            const target = document.getElementById(window.location.hash.substring(1));
+
+            setTimeout(function () {
+                window.scroll({
+                    top: 0
+                });
+
+                setTimeout(() => {
+                    window.scroll({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }, 1000);
+            }, 1);
+        }
+
+
+
+
+        window.addEventListener("load", (event) => {
+            const locationHash = window.location.hash;
+            const scrollTop = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            if (locationHash === "#docsTabsAPI") {
+                const apiTab = document.querySelector('#docs-nav-pills a[href="#docsTabsAPI"]');
+
+                if (apiTab) {
+                    const apiTabsInstance = new mdb.Tab(apiTab);
+
+                    apiTabsInstance.show();
+                    scrollTop();
+                }
+            } else if (locationHash === "#docsTabsOverview") {
+                scrollTop();
+            } else if (["#topTemplates", "#newTemplates", "#trendingTemplates"].indexOf(locationHash) !== -1) {
+                const templateTab = document.querySelector('#templates-nav-pills a[href="' + locationHash + '"]');
+
+                if (templateTab) {
+                    const templateTabsInstance = new mdb.Tab(templateTab);
+
+                    templateTabsInstance.show();
+                    scrollTop();
+                }
+            }
+
+            const navPills = document.querySelectorAll('#docs-nav-pills a[data-mdb-toggle="tab"]');
+
+            if (navPills.length) {
+                navPills.forEach((el) => {
+                    el.addEventListener('click', (e) => {
+                        window.location.hash = e.target.hash;
+
+                        scrollTop();
+                    });
+                });
+            }
+
+            const templatePills = document.querySelectorAll('#templates-nav-pills a[data-mdb-toggle="pill"]');
+
+            if (templatePills.length) {
+                templatePills.forEach((el) => {
+                    el.addEventListener('click', (e) => {
+                        window.location.hash = e.target.hash;
+
+                        scrollTop();
+                    });
+                });
+            }
+        });
+    </script>
+
+
+    <script>
+        (function () {
+            const searchInput = document.getElementById('mdb-5-search-input');
+            const searchIcon = document.getElementById('mdb-5-search-icon');
+            const searchList = document.getElementById('mdb-5-search-list');
+            const searchForm = document.getElementById('mdb-5-search-container');
+            const searchDropdown = document.getElementById('mdb-5-search-dropdown');
+            const searchCount = document.getElementById('mdb-5-search-count');
+
+            let searchJsonFile = "https://mdbootstrap.com/wp-content/themes/mdbootstrap4/docs-app" + '/js/dist/search/';
+
+            switch ("standard") {
+                case 'b5-angular':
+                    searchJsonFile += 'search-angular.json'
+                    break;
+                case 'b5-react':
+                    searchJsonFile += 'search-react.json'
+                    break;
+                case 'b5-vue':
+                    searchJsonFile += 'search-vue.json'
+                    break;
+                default:
+                    searchJsonFile += 'search.json'
+                    break;
+            }
+
+            const search = new Search(searchInput, searchIcon, searchList, searchForm, searchDropdown, searchCount, searchJsonFile);
+
+            search.init();
+        })();
+    </script>
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.prod.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify.js"></script>
+    <script src="main.js"></script>
+    <blockquote>
+    </blockquote>
+
+
 
 </body>
 
