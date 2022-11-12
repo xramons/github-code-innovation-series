@@ -1,13 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <script type="application/javascript" src="main.js"></script>
+
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title> Generador de Bootstrap card </title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Recetas</h1>
-    <p>Mis Recetas</p>
+    <main class=" pt-4">
+        <div class="container  px-lg-5">
 
+
+
+
+
+
+            <div class="tab-content">
+                <div class="tab-pane fade in show active" id="docsTabsOverview" role="tabpanel">
+                    <div class="row">
+
+                        <div class=" col-md-12">
+                            <style>
+                                blockquote {
+                                    margin-bottom: 0px !important;
+                                }
+                            </style>
+                            <!-- Section: Content -->
+                            <section class="">
+                                <div id="app">
+
+
+
+                                    <div class="row">
+                                        <div class="col-md-4 mb-4 mb-md-0">
+                                            <div class="card">
+                                                <div class="card-body px-4">
+                                                    <div class="text-center">
+                                                        <button type="button" class="btn btn-primary mb-4 me-2"
+                                                            v-on:click="reset">
+                                                            Reset
+                                                        </button>
+                                                    </div>
+
+                                                    <!-- formTitle -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formTitle" v-model="cardTitle" />
+                                                        <label class="form-check-label" for="formTitle"> Title </label>
+                                                    </div>
+
+                                                    <!-- formText -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formText" v-model="cardText" />
+                                                        <label class="form-check-label" for="formText"> Text </label>
+                                                    </div>
+
+                                                    <!-- formButton -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formButton" v-model="cardButton" />
+                                                        <label class="form-check-label" for="formButton"> Button
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formImage -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formImage" v-model="cardImage" />
+                                                        <label class="form-check-label" for="formImage"> Image </label>
+                                                    </div>
+
+                                                    <!-- formHeader -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formHeader" v-model="cardHeader" />
+                                                        <label class="form-check-label" for="formHeader"> Header
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formFooter -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formFooter" v-model="cardFooter" />
+                                                        <label class="form-check-label" for="formFooter"> Footer
+                                                        </label>
+                                                    </div>
+                                                    <!-- formCenter -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formCenter" v-model="cardCenter" />
+                                                        <label class="form-check-label" for="formCenter"> Center
+                                                        </label>
+                                                    </div>
+                                                    <!-- formBorder -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formBorder" v-model="cardBorder" />
+                                                        <label class="form-check-label" for="formBorder"> Border
+                                                        </label>
+                                                    </div>
+
+                                                    <!-- formTextWhite -->
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="formTextWhite" v-model="cardTextWhite" />
+                                                        <label class="form-check-label" for="formTextWhite">
+                                                            White text
+                                                        </label>
+                                                    </div>
+                                                    <!-- Custom color -->
+                                                    <p class="text-center mb-2 mt-3"><strong>Custom color</strong></p>
+
+                                                    <input type="color"
+                                                        class="form-control form-control-color w-100 mb-4"
+                                                        id="formColor" title="Choose your color" v-model="customColor"
+                                                        style="max-width: 100%; height: 40px" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 mb-4 mb-md-0">
+                                            <!-- Section: Demo -->
+                                            <section class="border p-4 d-flex justify-content-center mb-4 bg-light">
+                                                <div :class="customClass" style="width: 22rem" :style="customStyle">
+                                                    <div class="bg-image hover-overlay ripple" v-if="cardImage">
+                                                        <img src="https://camo.githubusercontent.com/3d8782fec25373005a29c2ed4799daa3d15f2431164cb3c189fb03ad692a1bf7/68747470733a2f2f696e6e6f76616363696f6e2e636c6f75642f77702d636f6e74656e742f75706c6f6164732f323032322f30392f4f6e426f617264696e672e706e67"
+                                                            class="img-fluid" alt="Beach" />
+                                                        <a href="#!">
+                                                            <div class="mask"
+                                                                style="background-color: rgba(251, 251, 251, 0.15)">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-header" v-if="cardHeader">Featured</div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title" v-if="cardTitle">Card title</h5>
+                                                        <p class="card-text" v-if="cardText">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                        </p>
+                                                        <button type="button" class="btn btn-primary" v-if="cardButton">
+                                                            Button
+                                                        </button>
+                                                    </div>
+                                                    <div class="card-footer" v-if="cardFooter">2 days ago</div>
+                                                </div>
+                                            </section>
+                                            <!-- Section: Demo -->
+                                            <!-- Section:  Generated code-->
+                                            <section id="section-generated-code" ref="code" class="mb-4">
+                                                <!-- prettier-ignore -->
+                                                <div class="docs-pills border mobile-hidden">
+                                                    <div class="d-flex justify-content-between py-2"
+                                                        style="padding-left: .6rem;">
+                                                        <ul class="nav nav-pills p-2">
+                                                            <li class="nav-item"><a class="nav-link  active show "
+                                                                    role="tab">HTML</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane fade  active show "
+                                                            role="tabpanel">
+                                                            <pre class="grey lighten-3 mb-0 line-numbers language-html">
+                                                                <code class="">
+                                                                </code>
+                                                            </pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- Section: Generated code -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- Section: Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.prod.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify.js"></script>
+    
+    <blockquote>
+    </blockquote>
 </body>
 
 </html>
